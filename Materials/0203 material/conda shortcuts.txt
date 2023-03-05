@@ -1,0 +1,28 @@
+# Shortcuts for conda
+# peter.gruber@usi.ch
+# 2023-02
+
+# Open a shell
+# On OSX: open the program "Terminal"
+# On Windows: Start button > Run > cmd . > OK
+
+# create WSC environment
+conda update conda
+conda create --name WSC python=3.10
+conda activate WSC
+#conda install -c conda-forge jupyterlab     # need to force the channel
+conda install -c defaults jupyterlab
+
+# select
+conda activate WSC
+
+# get info
+conda env list        # list of available environments
+conda activate WSC
+conda list python     # installed packages and version for python
+conda list jupyter    # ... for jupyterlab
+
+
+# get the version of Python in Python
+import sys
+print(sys.version)
